@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Allotment</title>
+    <link rel="stylesheet" href="../css/seats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h2>Ground Floor  </h2>
+    <div class="container">
+        <div class="tables-container">
+            <!-- Tables and chairs will be dynamically generated here -->
+        </div>
+    </div>
+
+    <script>
+        const tablesContainer = document.querySelector('.tables-container');
+
+const tableLayout = [
+    [4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4]
+];
+
+function generateTables() {
+    for (let row of tableLayout) {
+        const rowDiv = document.createElement('div');
+        rowDiv.classList.add('row');
+        
+        row.forEach((_, i) => {
+            const tableDiv = document.createElement('div');
+            tableDiv.classList.add('table');
+            
+            const chairsDivTop = document.createElement('div');
+            chairsDivTop.classList.add('chairs');
+            
+            const chairsDivBottom = document.createElement('div');
+            chairsDivBottom.classList.add('chairs');
+            
+            for (let j = 0; j < 2; j++) {
+                const chairTop = document.createElement('i');
+                chairTop.classList.add('fa', 'fa-chair');
+                chairTop.addEventListener('click', () => toggleColor(chairTop));
+                chairsDivTop.appendChild(chairTop);
+
+                const chairBottom = document.createElement('i');
+                chairBottom.classList.add('fa', 'fa-chair');
+                chairBottom.addEventListener('click', () => toggleColor(chairBottom));
+                chairsDivBottom.appendChild(chairBottom);
+            }
+            
+            const tableIcon = document.createElement('i');
+            tableIcon.classList.add('fa', 'fa-square');
+            tableIcon.addEventListener('click', () => toggleColor(tableIcon));
+            
+            tableDiv.appendChild(chairsDivTop);
+            tableDiv.appendChild(tableIcon);
+            tableDiv.appendChild(chairsDivBottom);
+            
+            rowDiv.appendChild(tableDiv);
+        });
+
+        tablesContainer.appendChild(rowDiv);
+    }
+}
+
+function toggleColor(element) {
+    element.classList.toggle('red');
+}
+
+function confirmBooking() {
+    const selectedSeats = document.querySelectorAll('.fa.red');
+    selectedSeats.forEach(seat => {
+        seat.classList.remove('red');
+        seat.classList.add('occupied');
+    });
+    alert('Booking confirmed!');
+}
+
+// Generate tables on page load
+generateTables();
+
+    </script>
+</body>
+</html>
