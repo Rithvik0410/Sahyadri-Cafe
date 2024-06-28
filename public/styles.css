@@ -1,0 +1,47 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tables-container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    gap: 20px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chairs {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+}
+
+.fa-chair {
+    color: green;
+    cursor: pointer;
+}
+
+.fa-chair.red {
+    color: red;
+}
