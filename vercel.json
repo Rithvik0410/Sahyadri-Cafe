@@ -4,5 +4,6 @@
     { "source": "/login1", "destination": "/pages/login1.html" },
     { "source": "/login", "destination": "/pages/login.html" },
     { "source": "/admin", "destination": "/pages/admin.html" }
+    { "source": "/styles", "destination": "/css/styles.css" }
   ]
 }
