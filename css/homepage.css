@@ -13,29 +13,19 @@
 }
 
 body {
-
     background-color: rgb(0, 0, 0);
 }
 
 .product-card {
-
     border-radius: 30px;
     height: 360px;
     object-fit: cover;
     width: 100%;
 }
+
 .card-img-top {
     border-radius: 30px;
     height: fit-content;
-}
-
-.card-img-top1{
-    border-radius: 30px;
-    
-}
-
-.d-block{
-    border-radius: 30px;
 }
 
 .card-img-top1 {
@@ -66,5 +56,52 @@ body {
 @keyframes blinker {
     50% {
         opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .special-title {
+        font-size: 2rem;
+    }
+
+    .product-card {
+        height: auto;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 48%;
+        margin: 1%;
+    }
+
+    .card-img-top {
+        height: 80px;
+        width: 80px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .card-body {
+        text-align: center;
+        padding: 5px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        display: none; /* Hide the text for a cleaner look */
+    }
+
+    .blinking-live {
+        height: 30px;
+        width: 70px;
+        font-size: 1rem;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
