@@ -1,10 +1,30 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/pages/index.html" },
-    { "source": "/login1", "destination": "/pages/login1.html" },
-    { "source": "/login", "destination": "/pages/login.html" },
-    { "source": "/admin", "destination": "/pages/admin.html" },
-    { "source": "/styles", "destination": "/css/styles.css" }
-
+  "version": 2,
+  "public": "public",
+  "routes": [
+    {
+      "source": "/",
+      "destination": "/pages/index.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/pages/login.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/pages/admin.html"
+    },
+    {
+      "source": "/homepage-desktop",
+      "destination": "/pages/homepage(desktop).html"
+    },
+    {
+      "source": "/homepage-mobile",
+      "destination": "/pages/homepage(mobile).html"
+    },
+    {
+      "source": "/checkout",
+      "destination": "/pages/checkout.html"
+    }
   ]
 }

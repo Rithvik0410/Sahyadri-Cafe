@@ -1,0 +1,122 @@
+/* header */
+.header-logo {
+    height: 50px;
+}
+
+.header-text {
+    font-size: 1.5rem;
+}
+
+header {
+    background-color: rgb(41, 41, 29);
+}
+
+/* body */
+body {
+    background-color: rgb(12, 24, 11);
+    color: rgb(120, 101, 75);
+}
+
+/* Blinking Live Button */
+.blinking-live {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 80px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Product card */
+.product-card {
+    margin-bottom: 20px;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(252, 234, 210);
+}
+
+.product-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+    padding: 1.5px;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    color: rgb(6, 6, 6);
+}
+
+.container {
+    color: rgb(126, 110, 89);
+}
+
+/* Centering the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button-container button {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(197, 77, 77);
+    border: none;
+    border-radius: 15px;
+    padding: 10px 40px;  /* Increase the padding for a wider button */
+    width: 100%;         /* Set the width to 100% of the container */
+    max-width: 400px;    /* Optional: Set a maximum width */
+    cursor: pointer;
+}
+
+/* media query */
+@media all and (max-width: 720px) {
+    .product-card {
+        margin-bottom: 20px;
+        border-radius: 30px;
+        color: rgb(0, 0, 0);
+        background-color: rgb(252, 234, 210);
+        height: 300px;
+    }
+
+    .product-image {
+        height: 150px;
+        object-fit: cover;
+        border-radius: 30px;
+        padding: 1.5px;
+    }
+
+    .card-title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .card-text {
+        font-size: 1.5rem;
+        color: rgb(6, 6, 6);
+    }
+
+    .container {
+        color: rgb(126, 110, 89);
+    }
+}
